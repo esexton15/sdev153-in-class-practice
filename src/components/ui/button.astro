@@ -1,0 +1,51 @@
+---
+import { ArrowRight } from '@lucide/astro';
+
+interface Props {
+  href?: string;
+  variant?: 'primary' | 'secondary';
+}
+
+const { href, variant = 'primary' } = Astro.props;
+---
+
+<style>
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;;
+}
+
+.primary {
+  background-color: rgb(28, 26, 23);
+  color: rgb(249, 248, 246);
+  transition: background-color 0.3s ease;
+  padding: 14px 32px;
+}
+
+.primary:hover {
+  background-color: rgb(39, 37, 35);
+}
+
+.secondary {
+  color: rgb(28, 26, 23);
+  background: transparent;
+}
+
+.secondary:hover {
+  text-decoration: underline;
+}
+
+
+</style>
+
+<a href={href} class={`button ${variant}`}>
+  <slot />
+  <slot name="icon">
+    { variant === 'primary' && <ArrowRight size={16} />}
+  </slot>
+</a>
