@@ -5,7 +5,6 @@ import tunnel from 'astro-tunnel';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://esexton15.github.io',
 	base: "/sdev-153-in-class-practice",
 	vite: {
 		server: {

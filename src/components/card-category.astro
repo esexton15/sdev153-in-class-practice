@@ -6,7 +6,7 @@ interface Props {
 }
 
 const { title = "Outerwear", count = 12, categoryImg = "/outerwear.jpg" } = Astro.props;
-const backgroundUrl = `background-image: url("${categoryImg}");`
+const backgroundUrl = `background-image: url("/sdev153-in-class-practice/${categoryImg}");`
 ---
 
 <style>
@@ -36,7 +36,7 @@ const backgroundUrl = `background-image: url("${categoryImg}");`
   }
 </style>
 
-<a href="/shop" style={backgroundUrl} class="category-card">
+<a href="/sdev153-in-class-practice/shop" style={backgroundUrl} class="category-card">
   <div class="category-text">
     <h2>{title}</h2>
     <p>{count}</p>
