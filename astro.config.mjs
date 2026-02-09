@@ -7,10 +7,9 @@ import tunnel from 'astro-tunnel';
 export default defineConfig({
 	vite: {
 		server: {
-			allowedHosts: true,
-		},
-		preview: {
-			allowedHosts: true,
+			allowedHosts: [
+				"vacuous-tameika-adsorptively.ngrok-free.dev",
+			],
 		},
 	},
 	integrations: [tunnel()],

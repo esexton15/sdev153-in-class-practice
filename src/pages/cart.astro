@@ -1,7 +1,14 @@
 ---
+import CartItem from "../components/cart-item.astro";
 import Layout from "../layouts/layout.astro";
 ---
 <Layout>
-<h1>Hello World</h1>
-<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores iure ratione sequi dignissimos, eum, voluptatum hic minus modi nesciunt doloremque impedit est possimus distinctio unde, numquam laboriosam ad? Tempora, quas.</p>
+	<h1>Shopping Cart</h1>
+	<span>4 items</span>
+
+	<div aria-role="list">
+		<CartItem imgSrc="/product-1" title="Structured Cotton Blazer" quantity={1} price={285.00} />
+		<CartItem imgSrc="/product-2" title="Merino Wool Turtleneck" quantity={2} price={330.00} />
+		<CartItem imgSrc="/product-4" title="Cashmere Scarf" quantity={1} price={150.00} />
+	</div>
 </Layout>
