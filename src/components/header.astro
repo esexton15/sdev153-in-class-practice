@@ -5,17 +5,65 @@ import { Search, ShoppingCart } from "@lucide/astro"
 <style>
 	header {
 		border-bottom: 1px solid rgb(227, 224, 221);
-		min-height: 64px; /* Remove this */
+		padding-top: 5px;
+		position: sticky;
+		top: 0;
+		z-index: 1000;
+		background-color: white;
+	}
+
+	ul {
+    	list-style: none;
+        display: flex;
+        gap: 16px;
+		padding-left: 0;
+		margin: 0;
+    }
+
+	nav {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 16px 0;
+	}
+
+	a {
+		text-decoration: none;
+		color: inherit;
+		font-weight: 500;
+	}
+	
+	#nav-links {
+		padding-right: 8px;
+		font-size: 0.75rem;
+	}
+
+	.brand-link a {
+		color: rgb(28, 26, 23);
 	}
 </style>
 
 <header class="header">
-	<a href="/shop">Shop</a>
-	<a href="/shop">New Arrivals</a>
-	<a href="/#about">About</a>
+	<nav>
+		<section style="color: rgb(122, 122, 122); ">
+			<ul id="nav-links">
+				<li><a href="/shop">Shop</a></li>
+				<li><a href="/shop">New Arrivals</a></li>
+				<li><a href="/#about">About</a></li>
+			</ul>
+		</section>
 
-	<a href="/">ATELIER</a>
+		<section style="justify-content: center; text-align: center; font-size: 1.75rem;">
+			<ul class="brand-link" style="font-family: 'Georgia', serif;">
+				<li><a href="/">ATELIER</a></li>
+			</ul>
+		</section>
 
-	<a href="#search"><Search /></a>
-	<a href="/cart"><ShoppingCart /></a>
+		<section>
+			<ul>
+				<li><a href="#search"><Search /></a></li>
+				<li><a href="/cart"><ShoppingCart /></a></li>
+			</ul>
+		</section>
+	</nav>
 </header>

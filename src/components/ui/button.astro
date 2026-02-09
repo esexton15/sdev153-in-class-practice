@@ -17,7 +17,9 @@ const { href, variant = 'primary' } = Astro.props;
   gap: 8px;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.875rem;;
+  font-size: 0.875rem;
+  flex-grow: 0;
+  flex-shrink: 0;
 }
 
 .primary {
@@ -39,8 +41,6 @@ const { href, variant = 'primary' } = Astro.props;
 .secondary:hover {
   text-decoration: underline;
 }
-
-
 </style>
 
 <a href={href} class={`button ${variant}`}>

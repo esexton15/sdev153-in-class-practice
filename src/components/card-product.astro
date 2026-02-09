@@ -1,5 +1,13 @@
 ---
-
+interface Props {
+    product: {
+        imageUrl: string,
+        title: string,
+        category: string
+        price: string
+    }
+}
+const { product } = Astro.props;
 ---
 
 <style>
@@ -7,5 +15,5 @@
 </style>
 
 <article>
-
+    <img src={product.imageUrl} alt="" />
 </article>

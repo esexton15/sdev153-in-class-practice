@@ -1,11 +1,45 @@
 ---
+interface Props {
+    title?: string
+    count?: number
+    categoryImg?: string
+}
 
+const { title = "Outerwear", count = 12, categoryImg = "/outerwear.jpg" } = Astro.props;
+const backgroundUrl = `background-image: url("${categoryImg}");`
 ---
 
 <style>
+  .category-card {
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 4/5;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-decoration: none;
+  }
 
+  .category-text {
+    padding: 0.25rem;
+    text-align: center;
+  }
+
+  h2 {
+    color: rgb(249, 248, 246);
+  }
+
+  p {
+    color: rgba(249, 248, 246, 0.7)
+  }
 </style>
 
-<article>
-	
-</article>
+<a href="/shop" style={backgroundUrl} class="category-card">
+  <div class="category-text">
+    <h2>{title}</h2>
+    <p>{count}</p>
+  </div>
+</a>
+

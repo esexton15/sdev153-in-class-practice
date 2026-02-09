@@ -2,9 +2,92 @@
 	footer {
 		border-top: 1px solid rgb(227, 224, 221);
 		min-height: 64px;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		align-items: left;
+		padding: 16px;
 	}
+		
+	ul {
+    	list-style: none;
+        gap: 16px;
+		padding-left: 0;
+		margin: 0;
+    }
+
+	li {
+		text-decoration: none;
+		margin-bottom: 8px;
+	}
+
+	section {
+		font-size: 14px;
+		font-weight: 200;
+	}
+
+	em {
+		font-size: 12px;
+		font-weight: 400;
+		color: black;
+		font-style: normal;
+	}
+	
+	a {
+		text-decoration: none;
+		color: rgb(122, 122, 122);
+	}
+
+	input {
+		border: 1px solid rgb(227, 224, 221);
+		padding: 8px;
+		margin-top: 8px;
+	}
+
+	.button {
+		background-color: black;
+		color: white;
+		border: none;
+	}
+	
 </style>
 
 <footer>
+	<section>
+		<ul>
+			<li><a href="/" style="font-family: 'Georgia', serif; font-size: 1.25rem; color: black;">ATELIER</a></li>
+			<li>Curated fashion essentials crafted with intention for the modern wardrobe.</li>
+		</ul>
+	</section>
+		
+	<section>
+		<ul>
+			<li><p><em>SHOP</em></p></li>
+			<li><a href="/">All Products</a></li>
+			<li><a href="/">New Arrivals</a></li>
+			<li><a href="/">Outerwear</a></li>
+			<li><a href="/">Knitwear</a></li>
+			<li><a href="/">Accessories</a></li>
+		</ul>
+	</section>
 	
+	<section>
+		<ul>
+			<li><p><em>COMPANY</em></p></li>
+			<li><a href="/">Our Story</a></li>
+			<li><a href="/">Sustainability</a></li>
+			<li><a href="/">Careers</a></li>
+			<li><a href="/">Contact</a></li>
+		</ul>
+	</section>
+	
+	<section>
+		<ul>
+			<li><p><em>STAY IN TOUCH</em></p></li>
+			<li>Subscribe for early access to new collections and exclusive offers.</li>
+		</ul>
+		<form action="">
+			<input type="email" name="" id="" placeholder="Your email">
+			<button class="button">Join</button>
+		</form>
+	</section>
 </footer>

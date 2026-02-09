@@ -1,20 +1,106 @@
 ---
 import Layout from "../layouts/layout.astro";
 import Hero from "../components/hero.astro";
-import Button from "../components/ui/button.astro";
+import CardCategory from "../components/card-category.astro";
+import CardProduct from "../components/card-product.astro"
+import Button from "../components/ui/button.astro"
 ---
+<style>
+	.section-title {
+		font-size: 36px;
+		margin-bottom: 1.5rem;
+		font-family: "Playfair Display", serif;
+		color: rgb(28, 26, 23);
+	}
+
+	.pre-title {
+		font-weight: 400;
+		letter-spacing: 0.2em;
+		font-size: 0.75rem;
+		line-height: 1.0;
+		margin-bottom: 1rem;
+		color: rgb(120, 115, 109);
+		font-family: Arial, Helvetica, sans-serif;
+	}
+
+	.row {
+		display: block;
+	}
+
+	@media screen and (min-width: 800px) {
+		.row {
+			display: flex;
+			gap: 16px;
+		}
+	}
+
+
+	section {
+		margin-top: 5rem;
+		margin-bottom: 5rem;
+	}
+</style>
+
 <Layout>
 	<Hero />
 
 	<section>
-		<h2>Categories</h2>
+		<div class="center">
+			<div>
+				<span class="pre-title">Browse by</span>
+				<h2 class="section-title">Categories</h2>
+			</div>
+		</div>
+		<div class="row">
+			<CardCategory />
+			<CardCategory />
+			<CardCategory />
+		</div>
 	</section>
 
 	<section>
-		<h2>Features Pieces</h2>
+		<span class="pre-title">Curated for you</span>
+		<h2 class="section-title">Features Pieces</h2>
+		<div class="row">
+			<CardProduct
+				product={{
+					title: "Structured Cotton Blazer",
+					category: "Outerwear",
+					price: "$285",
+					imageUrl: "/product-1.jpg"
+				}}
+			/>
+			<CardProduct
+				product={{
+					title: "Structured Cotton Blazer",
+					category: "Outerwear",
+					price: "$285",
+					imageUrl: "/product-2.jpg"
+				}}
+			/>
+			<CardProduct
+				product={{
+					title: "Structured Cotton Blazer",
+					category: "Outerwear",
+					price: "$285",
+					imageUrl: "/product-3.jpg"
+				}}
+			/>
+			<CardProduct 				
+				product={{
+					title: "Structured Cotton Blazer",
+					category: "Outerwear",
+					price: "$285",
+					imageUrl: "/product-4.jpg"
+				}}
+			/>
+		</div>
 	</section>
 
-	<section>
-		<h2 id="#about">Our Philosophy</h2>
+	<section class="center">
+		<h2 id="#about" class="pre-title">Our Philosophy</h2>
+		<p class="section-title">Designed with purpose, made to last. We believe in fewer, better things.</p>
+		<p>Every piece in our collection is thoughtfully designed using responsibly sourced materials, crafted by skilled artisans who share our commitment to quality.</p>
+		<Button href="#">Discover More</Button>
 	</section>
 </Layout>
