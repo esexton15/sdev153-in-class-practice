@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://esexton15.github.io/sdev-153-in-class-practice/sitemap-index.xml
